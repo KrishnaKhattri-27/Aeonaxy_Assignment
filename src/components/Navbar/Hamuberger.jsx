@@ -7,7 +7,7 @@ const Hamburger = ({ showmenu, handleClick }) => {
   return (
     <div
       className={`bg-white shadow-2xl text-base w-[85%] xxs:w-[70%] sm:w-[40%] h-screen absolute z-[2000]  top-0 transition-all duration-500 pt-32 pb-16 pl-16 flex flex-col justify-between ${
-        showmenu ? "right-0" : "-right-[70%]"
+        showmenu ? "right-0" : " -right-[85%] xxs:-right-[70%] sm:-right-[40%]"
       }`}
     >
       <ul className="flex flex-col gap-y-4">

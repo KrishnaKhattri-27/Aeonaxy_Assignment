@@ -4,6 +4,8 @@ import Dropdown from "../Dropdowns/Dropdown";
 import LinkItem from "./LinkItem";
 import "./Navbar.css";
 import Hamburger from "./Hamuberger";
+import logo from "../../assets/images/calendly.webp";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [screenSize, setScreenSize] = useState(false);
@@ -33,15 +35,14 @@ const Navbar = () => {
 
   return (
     <header className="flex justify-between items-center py-5 px-5 sm:px-10 relative">
-      
-      <div className="flex">
-        <img src="" alt="" />
-        <h1 className="font-menagrotesk-itallic text-3xl text-customblue-200">
+      <Link className="flex items-center">
+        <img src={logo} alt="" className="w-16 aspect-auto" />
+        <h1 className="font-menagrotesk-itallic text-3xl -ml-2 mt-1 text-customblue-200">
           Calendly
         </h1>
-      </div>
+      </Link>
 
-      <ul className="lg:flex hidden gap-x-6 lg:gap-x-8 justify-center items-center">
+      <ul className="lg:flex hidden gap-x-6 lg:gap-x-5 justify-center items-center">
         {items.map((e) =>
           items.indexOf(e) === 3 || items.indexOf(e) === 5 ? (
             <Dropdown name={e.title} options={e.options} />
@@ -52,7 +53,9 @@ const Navbar = () => {
       </ul>
 
       <div className="lg:flex hidden items-center gap-x-4">
-        <h3 className="text-black font-menagrotesk-semi text-base">Log In</h3>
+        <Link>
+          <h3 className="text-black font-menagrotesk-semi text-base">Log In</h3>
+        </Link>
         <button className="text-white bg-customblue-400 font-menagrotesk-semi text-sm px-6 py-3  rounded-l-full rounded-r-full">
           Get started
         </button>
@@ -69,7 +72,9 @@ const Navbar = () => {
             showmenu ? "w-full " : "w-3/4 "
           } h-1 linex  line1 mb-1 bg-customblue-400`}
         ></i>
-        <i className={`block w-full linex h-1 bg-customblue-400 line2 mb-1`}></i>
+        <i
+          className={`block w-full linex h-1 bg-customblue-400 line2 mb-1`}
+        ></i>
         <i
           className={`block linex ${
             showmenu ? "w-full " : "w-1/2 "
@@ -80,7 +85,6 @@ const Navbar = () => {
       {screenSize ? (
         <Hamburger showmenu={showmenu} handleClick={handleClick} />
       ) : null}
-
     </header>
   );
 };

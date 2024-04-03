@@ -2,13 +2,12 @@ import React from "react";
 import { useState } from "react";
 
 const Dropdown = ({ options, name }) => {
-
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-  
+
   return (
     <div className="relative">
       {/* Dropdown button */}

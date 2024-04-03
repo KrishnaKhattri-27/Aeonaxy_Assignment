@@ -1,33 +1,37 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSchool,faArrowUpRightDots,faBolt,faScaleBalanced, faUserGear, faUserPlus} from '@fortawesome/free-solid-svg-icons'
+
+
 const data=[
     {
-        icon:"",
+        icon:<FontAwesomeIcon icon={faScaleBalanced} className=' text-customblue-200 fa-2x'/>,
         title:"Sales",
-        para:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam eaque in vero deserunt ex inventore voluptatum dolor, error iure maiores at."
+        para:"Spend more time selling, and less time on admin. Shorten your sales cycle by letting prospects schedule while they're in peak buying mode."
     },
     {
-        icon:"",
-        title:"Sales",
-        para:"lr"
+        icon:<FontAwesomeIcon icon={faUserPlus} className=' text-customblue-200 fa-2x'/>,
+        title:"Recruiting",
+        para:"Simplify recruitment by smoothing every aspect of the interview scheduling process, including automated follow-ups."
     },
     {
-        icon:"",
-        title:"Sales",
-        para:"lr"
+        icon:<FontAwesomeIcon icon={faSchool} className=' text-customblue-200 fa-2x'/>,
+        title:"Education",
+        para:"Control your office hours, and empower students and parents to schedule appointments easily."
     },
     {
-        icon:"",
-        title:"Sales",
-        para:"lr"
+        icon:<FontAwesomeIcon icon={faArrowUpRightDots} className=' text-customblue-200 fa-2x'/>,
+        title:"Revenue Operations",
+        para:"Streamline meeting and activity data. Calendly's native integrations with Salesforce and HubSpot ensure up-to-date reporting."
     },
     {
-        icon:"",
-        title:"Sales",
-        para:"lr"
+        icon:<FontAwesomeIcon icon={faBolt} className=' text-customblue-200 fa-2x '/>,
+        title:"Marketing",
+        para:"Convert interested prospects into scheduled meetings and demos faster. Skip steps that cause customer friction."
     },
     {
-        icon:"",
-        title:"Sales",
-        para:"lr"
+        icon:<FontAwesomeIcon icon={faUserGear} className=' text-customblue-200 fa-2x'/>,
+        title:"Customer Success",
+        para:"Offer exceptional support: Your clients will be delighted with one-click scheduling and increased responsiveness."
     },
 ]
 
